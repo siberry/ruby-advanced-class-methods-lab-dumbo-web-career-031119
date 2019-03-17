@@ -57,9 +57,9 @@ class Song
   
   def self.new_from_filename(filename)
     artist = artist_and_title_arr(filename)[0]
-    song = artist_and_title_arr(filename)[1]
+    title = artist_and_title_arr(filename)[1]
     
-    song = self.create_by_name(name)
+    song = self.create_by_name(title)
     song.artist_name = artist
     song
   end
