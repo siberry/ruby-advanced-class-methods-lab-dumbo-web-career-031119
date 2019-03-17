@@ -1,7 +1,7 @@
 require 'pry'
 
 class Song
-  attr_accessor :name, :artist_name
+  attr_accessor :name, :artist_name, :file_name
   @@all = []
 
   def self.all
@@ -47,5 +47,9 @@ class Song
   def self.alphabetical
     self.all.sort_by{|s| s.name}
   end
+  
+  def self.new_from_filename(filename)
+    song = self.create
+    
 
 end
