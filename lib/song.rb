@@ -50,6 +50,7 @@ class Song
   
   def self.new_from_filename(filename)
     name = filename.split(" - "||".")[1].split(".")[0]
+    binding.pry
     song = self.create_by_name(name)
   end
     
