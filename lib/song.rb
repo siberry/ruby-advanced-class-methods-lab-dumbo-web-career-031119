@@ -48,8 +48,12 @@ class Song
     self.all.sort_by{|s| s.name}
   end
   
-  def self.new_from_filename(filename)
+  def artist_and_title_arr(filename)
     artist_and_name = filename.split(" - ")
+    artist_and_name[1] = 
+  
+  
+  def self.new_from_filename(filename)
     name = artist_and_name[1].split(".")[0]
     artist = artist_and_name[0]
     
